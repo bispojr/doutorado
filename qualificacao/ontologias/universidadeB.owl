@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://www.owl-ontologies.com/universidadeB.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/universidadeB.owl">
+  <owl:Ontology rdf:about=""/>
+  <rdfs:Class rdf:ID="Aula"/>
+  <rdfs:Class rdf:ID="Funcionario"/>
+  <rdfs:Class rdf:ID="Doutorando">
+    <rdfs:subClassOf rdf:resource="#Funcionario"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Sala"/>
+  <rdfs:Class rdf:ID="Assistente">
+    <rdfs:subClassOf rdf:resource="#Funcionario"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="ProfessorDE">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Professor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="ProfessorAssociado">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#Professor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="AssistentePesquisa">
+    <rdfs:subClassOf rdf:resource="#Assistente"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="ProfessorAssistente">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#Professor"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#Professor">
+    <rdfs:subClassOf rdf:resource="#Funcionario"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="ProfessorVisitante">
+    <rdfs:subClassOf rdf:resource="#Professor"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="AssistenteEnsino">
+    <rdfs:subClassOf rdf:resource="#Assistente"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Referencia"/>
+  <owl:ObjectProperty rdf:ID="leciona">
+    <rdfs:range rdf:resource="#Aula"/>
+    <rdfs:domain rdf:resource="#Professor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="publicacoes">
+    <rdfs:range rdf:resource="#Referencia"/>
+    <rdfs:domain rdf:resource="#Funcionario"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="departamento">
+    <rdfs:domain rdf:resource="#Funcionario"/>
+    <rdfs:range rdf:resource="#Sala"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="nome">
+    <rdfs:domain rdf:resource="#Funcionario"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="dataContr">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#Funcionario"/>
+  </owl:DatatypeProperty>
+  <Funcionario rdf:ID="funcRonaldo"/>
+  <Aula rdf:ID="discBacteriologia"/>
+  <Aula rdf:ID="discFisiologia"/>
+  <Funcionario rdf:ID="funcClaudio"/>
+  <ProfessorVisitante rdf:ID="docJoseAmabis"/>
+  <Doutorando rdf:ID="estJuliana"/>
+  <Sala rdf:ID="depBio"/>
+  <Funcionario rdf:ID="funcRejane"/>
+  <ProfessorDE rdf:ID="docNelsonWolosker"/>
+  <ProfessorDE rdf:ID="docLelianeBarros"/>
+  <Aula rdf:ID="discAbiogenese"/>
+  <Doutorando rdf:ID="estLuana"/>
+  <Aula rdf:ID="curLattes"/>
+  <Sala rdf:ID="depMed"/>
+  <Funcionario rdf:ID="funcAnaEliza"/>
+  <ProfessorAssociado rdf:ID="docReginaldoCoelho"/>
+  <ProfessorAssociado rdf:ID="docFabioAndrade"/>
+  <ProfessorDE rdf:ID="docRenatoJanine"/>
+  <Aula rdf:ID="discAntiguidade"/>
+  <Funcionario rdf:ID="funcJoao"/>
+  <Aula rdf:ID="discEpidemiologia"/>
+  <Funcionario rdf:ID="funcJose"/>
+  <Doutorando rdf:ID="estCarlos"/>
+  <Aula rdf:ID="curMetodoSocratico"/>
+  <Funcionario rdf:ID="funcJosefa"/>
+  <Sala rdf:ID="depHist"/>
+  <Aula rdf:ID="curCompNuvens"/>
+  <Funcionario rdf:ID="funcRomulo"/>
+  <Sala rdf:ID="depComp"/>
+  <Doutorando rdf:ID="estFlavio"/>
+  <Aula rdf:ID="curHistoriaEvolucao"/>
+  <Funcionario rdf:ID="funcRenato"/>
+  <ProfessorDE rdf:ID="docMarilenaChaui"/>
+  <Doutorando rdf:ID="estBarbara"/>
+  <ProfessorAssociado rdf:ID="docTeodoroAlmeida"/>
+  <Funcionario rdf:ID="funcNivea"/>
+  <ProfessorAssociado rdf:ID="docAntonioSilva"/>
+  <Doutorando rdf:ID="estOlivia"/>
+  <Aula rdf:ID="discFilMedieval"/>
+  <Funcionario rdf:ID="funcLais"/>
+  <Aula rdf:ID="discAnatomia"/>
+  <ProfessorDE rdf:ID="docNewtonCosta"/>
+  <Doutorando rdf:ID="estPaula"/>
+  <Aula rdf:ID="discHisSocialBrasil"/>
+  <ProfessorDE rdf:ID="docAlmeidaJr"/>
+  <Aula rdf:ID="discIA"/>
+  <Aula rdf:ID="discEstDados"/>
+  <ProfessorDE rdf:ID="docRonaldoGryschek"/>
+  <Aula rdf:ID="discProgramacao"/>
+  <Funcionario rdf:ID="funcMario"/>
+  <Doutorando rdf:ID="estDiego"/>
+  <Aula rdf:ID="discEstetica"/>
+  <Aula rdf:ID="discIntrHistoria"/>
+  <Funcionario rdf:ID="funcPedro"/>
+  <Sala rdf:ID="depFilo"/>
+  <ProfessorDE rdf:ID="docMarceloFinger"/>
+  <Funcionario rdf:ID="funcNivaldo"/>
+  <Funcionario rdf:ID="funcAntonio"/>
+  <Doutorando rdf:ID="estAmanda"/>
+  <Aula rdf:ID="discEvolucao"/>
+  <ProfessorAssociado rdf:ID="docEmanuelCarrilho"/>
+  <Doutorando rdf:ID="estMercia"/>
+  <Aula rdf:ID="discTeoriaConhecimento"/>
+  <ProfessorDE rdf:ID="docThelmaOkay"/>
+  <Aula rdf:ID="curDitaduraMilitar"/>
+  <ProfessorDE rdf:ID="docCezar"/>
+  <ProfessorDE rdf:ID="docRenataWassermann"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.6, Build 613)  http://protege.stanford.edu -->

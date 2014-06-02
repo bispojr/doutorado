@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<rdf:RDF xmlns='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'
+         xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+         xmlns:xsd='http://www.w3.org/2001/XMLSchema#'
+         xmlns:align='http://knowledgeweb.semanticweb.org/heterogeneity/alignment#'>
+<Alignment>
+  <xml>yes</xml>
+  <level>0</level>
+  <type>**</type>
+  <onto1>
+    <Ontology rdf:about="http://www.owl-ontologies.com/universidadeA.owl">
+      <location>http://www.owl-ontologies.com/universidadeA.owl</location>
+    </Ontology>
+  </onto1>
+  <onto2>
+    <Ontology rdf:about="http://www.owl-ontologies.com/universidadeB.owl">
+      <location>http://www.owl-ontologies.com/universidadeB.owl</location>
+    </Ontology>
+  </onto2>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.owl-ontologies.com/universidadeA.owl#sala'/>
+      <entity2 rdf:resource='http://www.owl-ontologies.com/universidadeB.owl#departamento'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.owl-ontologies.com/universidadeA.owl#Departamento'/>
+      <entity2 rdf:resource='http://www.owl-ontologies.com/universidadeB.owl#Sala'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.owl-ontologies.com/universidadeA.owl#Pessoas'/>
+      <entity2 rdf:resource='http://www.owl-ontologies.com/universidadeB.owl#Funcionario'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.owl-ontologies.com/universidadeA.owl#Disciplina'/>
+      <entity2 rdf:resource='http://www.owl-ontologies.com/universidadeB.owl#Aula'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.owl-ontologies.com/universidadeA.owl#leciona'/>
+      <entity2 rdf:resource='http://www.owl-ontologies.com/universidadeB.owl#leciona'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+  <map>
+    <Cell>
+      <entity1 rdf:resource='http://www.owl-ontologies.com/universidadeA.owl#Docente'/>
+      <entity2 rdf:resource='http://www.owl-ontologies.com/universidadeB.owl#Professor'/>
+      <relation>=</relation>
+      <measure rdf:datatype='http://www.w3.org/2001/XMLSchema#float'>1.0</measure>
+    </Cell>
+  </map>
+</Alignment>
+</rdf:RDF>

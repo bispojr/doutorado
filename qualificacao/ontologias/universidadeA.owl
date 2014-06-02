@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://www.owl-ontologies.com/universidadeA.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/universidadeA.owl">
+  <owl:Ontology rdf:about=""/>
+  <rdfs:Class rdf:ID="Medicina">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Docente"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Pessoas"/>
+  <rdfs:Class rdf:ID="Funcionario">
+    <rdfs:subClassOf rdf:resource="#Pessoas"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Estudante">
+    <rdfs:subClassOf rdf:resource="#Pessoas"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="CienciaComp">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:ID="Ciencia"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Filosofia">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#Docente"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Biologia">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="#Ciencia"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="#Docente">
+    <rdfs:subClassOf rdf:resource="#Pessoas"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:ID="Departamento"/>
+  <rdfs:Class rdf:ID="Disciplina"/>
+  <rdfs:Class rdf:about="#Ciencia">
+    <rdfs:subClassOf rdf:resource="#Docente"/>
+  </rdfs:Class>
+  <owl:ObjectProperty rdf:ID="sala">
+    <rdfs:range rdf:resource="#Departamento"/>
+    <rdfs:domain rdf:resource="#Docente"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="cursa">
+    <rdfs:domain rdf:resource="#Estudante"/>
+    <rdfs:range rdf:resource="#Disciplina"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="leciona">
+    <rdfs:domain rdf:resource="#Docente"/>
+    <rdfs:range rdf:resource="#Disciplina"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="sobrenome">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Pessoas"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Pessoas"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="nome">
+    <rdfs:domain rdf:resource="#Pessoas"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="dataNasc">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#Pessoas"/>
+  </owl:DatatypeProperty>
+  <Disciplina rdf:ID="discAbiogenese"/>
+  <Funcionario rdf:ID="funcRejane"/>
+  <Estudante rdf:ID="estFernanda"/>
+  <Estudante rdf:ID="estRoberta"/>
+  <Estudante rdf:ID="estCarlos"/>
+  <Estudante rdf:ID="estPaula"/>
+  <Disciplina rdf:ID="discEpidemiologia"/>
+  <Disciplina rdf:ID="discPreHistoria"/>
+  <CienciaComp rdf:ID="docFlavioSoares"/>
+  <Funcionario rdf:ID="funcJose"/>
+  <Estudante rdf:ID="estNoberto"/>
+  <Funcionario rdf:ID="funcRenato"/>
+  <Departamento rdf:ID="depComp"/>
+  <Estudante rdf:ID="estFlavio"/>
+  <Estudante rdf:ID="estLuana"/>
+  <Medicina rdf:ID="docNelsonWolosker"/>
+  <Departamento rdf:ID="depMed"/>
+  <Funcionario rdf:ID="funcClaudio"/>
+  <Filosofia rdf:ID="docMarilenaChaui">
+    <sobrenome rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Chauí</sobrenome>
+    <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Marilena</nome>
+  </Filosofia>
+  <Estudante rdf:ID="estOlivia"/>
+  <Disciplina rdf:ID="discHistSocialBrasil"/>
+  <Funcionario rdf:ID="funcLais"/>
+  <Funcionario rdf:ID="funcJosefa"/>
+  <CienciaComp rdf:ID="docLelianeBarros"/>
+  <Disciplina rdf:ID="discIA"/>
+  <Departamento rdf:ID="depBio"/>
+  <Estudante rdf:ID="estMercia"/>
+  <Estudante rdf:ID="estGustavo"/>
+  <Funcionario rdf:ID="funcRomulo"/>
+  <Estudante rdf:ID="estOlavo"/>
+  <Funcionario rdf:ID="funcAnaEliza"/>
+  <Disciplina rdf:ID="discFilMedieval"/>
+  <Estudante rdf:ID="estPatricio"/>
+  <Funcionario rdf:ID="funcAntonio"/>
+  <Funcionario rdf:ID="funcNivea"/>
+  <Estudante rdf:ID="estEduardo"/>
+  <Estudante rdf:ID="estJuliana"/>
+  <Biologia rdf:ID="docCezar"/>
+  <Estudante rdf:ID="estAmanda">
+    <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Amanda</nome>
+    <sobrenome rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Vasconcelos</sobrenome>
+  </Estudante>
+  <Estudante rdf:ID="estAna"/>
+  <Disciplina rdf:ID="discProgramacao"/>
+  <Funcionario rdf:ID="funcMario"/>
+  <Disciplina rdf:ID="discTeoriaConhecimento"/>
+  <Medicina rdf:ID="docRonaldoGryschek"/>
+  <Disciplina rdf:ID="discBacteriologia"/>
+  <Estudante rdf:ID="estBruno"/>
+  <CienciaComp rdf:ID="docMarceloFinger"/>
+  <Estudante rdf:ID="estMarieta"/>
+  <Estudante rdf:ID="estGabriela"/>
+  <Biologia rdf:ID="docJoseAmabis"/>
+  <Funcionario rdf:ID="funcJoao"/>
+  <Estudante rdf:ID="estJulio"/>
+  <Estudante rdf:ID="estCarolina"/>
+  <Filosofia rdf:ID="docNewtonCosta">
+    <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Newton</nome>
+    <sobrenome rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Costa</sobrenome>
+  </Filosofia>
+  <Disciplina rdf:ID="discIntrHistoria"/>
+  <Filosofia rdf:ID="docRenatoJanine">
+    <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Renato</nome>
+    <sobrenome rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Janine</sobrenome>
+  </Filosofia>
+  <Disciplina rdf:ID="discAntiguidade"/>
+  <Estudante rdf:ID="estRenato"/>
+  <Disciplina rdf:ID="discEvolucao"/>
+  <Disciplina rdf:ID="discEmbriologia"/>
+  <Estudante rdf:ID="estBarbara"/>
+  <Disciplina rdf:ID="discFisiologia"/>
+  <Estudante rdf:ID="estLeandro"/>
+  <Disciplina rdf:ID="discEstDados"/>
+  <Estudante rdf:ID="estBernardo"/>
+  <Estudante rdf:ID="estDiana"/>
+  <Estudante rdf:ID="estAndre"/>
+  <Departamento rdf:ID="depHist"/>
+  <Estudante rdf:ID="estOnofre"/>
+  <Departamento rdf:ID="depFilo"/>
+  <CienciaComp rdf:ID="docRenataWassermann"/>
+  <Disciplina rdf:ID="discEstetica"/>
+  <Funcionario rdf:ID="funcPedro"/>
+  <Disciplina rdf:ID="discAnatomia"/>
+  <Biologia rdf:ID="docAlmeidaJr"/>
+  <Funcionario rdf:ID="funcNivaldo"/>
+  <Estudante rdf:ID="estDiego"/>
+  <Estudante rdf:ID="estMarcio"/>
+  <Funcionario rdf:ID="funcRonaldo"/>
+  <Medicina rdf:ID="docThelmaOkay"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.5, Build 608)  http://protege.stanford.edu -->

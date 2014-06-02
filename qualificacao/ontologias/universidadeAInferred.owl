@@ -1,0 +1,974 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY universidadeA "http://www.owl-ontologies.com/universidadeA.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/universidadeA.owl#"
+     xml:base="http://www.owl-ontologies.com/universidadeA.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:universidadeA="http://www.owl-ontologies.com/universidadeA.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#cursa -->
+
+    <owl:ObjectProperty rdf:about="#cursa">
+        <rdfs:range rdf:resource="#Disciplina"/>
+        <rdfs:domain rdf:resource="#Estudante"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#leciona -->
+
+    <owl:ObjectProperty rdf:about="#leciona">
+        <rdfs:range rdf:resource="#Disciplina"/>
+        <rdfs:domain rdf:resource="#Docente"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#sala -->
+
+    <owl:ObjectProperty rdf:about="#sala">
+        <rdfs:range rdf:resource="#Departamento"/>
+        <rdfs:domain rdf:resource="#Docente"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#dataNasc -->
+
+    <owl:DatatypeProperty rdf:about="#dataNasc">
+        <rdfs:domain rdf:resource="#Pessoas"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#id -->
+
+    <owl:DatatypeProperty rdf:about="#id">
+        <rdfs:domain rdf:resource="#Pessoas"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#nome -->
+
+    <owl:DatatypeProperty rdf:about="#nome">
+        <rdfs:domain rdf:resource="#Pessoas"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#sobrenome -->
+
+    <owl:DatatypeProperty rdf:about="#sobrenome">
+        <rdfs:domain rdf:resource="#Pessoas"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&owl;topDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Biologia -->
+
+    <owl:Class rdf:about="#Biologia">
+        <rdfs:subClassOf rdf:resource="#Ciencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Ciencia -->
+
+    <owl:Class rdf:about="#Ciencia">
+        <rdfs:subClassOf rdf:resource="#Docente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#CienciaComp -->
+
+    <owl:Class rdf:about="#CienciaComp">
+        <rdfs:subClassOf rdf:resource="#Ciencia"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Departamento -->
+
+    <owl:Class rdf:about="#Departamento">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Disciplina -->
+
+    <owl:Class rdf:about="#Disciplina">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Docente -->
+
+    <owl:Class rdf:about="#Docente">
+        <rdfs:subClassOf rdf:resource="#Pessoas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Estudante -->
+
+    <owl:Class rdf:about="#Estudante">
+        <rdfs:subClassOf rdf:resource="#Pessoas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Filosofia -->
+
+    <owl:Class rdf:about="#Filosofia">
+        <rdfs:subClassOf rdf:resource="#Docente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Funcionario -->
+
+    <owl:Class rdf:about="#Funcionario">
+        <rdfs:subClassOf rdf:resource="#Pessoas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Medicina -->
+
+    <owl:Class rdf:about="#Medicina">
+        <rdfs:subClassOf rdf:resource="#Docente"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#Pessoas -->
+
+    <owl:Class rdf:about="#Pessoas">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#depBio -->
+
+    <Departamento rdf:about="#depBio">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Departamento>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#depComp -->
+
+    <Departamento rdf:about="#depComp">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Departamento>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#depFilo -->
+
+    <owl:Thing rdf:about="#depFilo">
+        <rdf:type rdf:resource="#Departamento"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#depHist -->
+
+    <Departamento rdf:about="#depHist">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Departamento>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#depMed -->
+
+    <owl:Thing rdf:about="#depMed">
+        <rdf:type rdf:resource="#Departamento"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discAbiogenese -->
+
+    <owl:Thing rdf:about="#discAbiogenese">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discAnatomia -->
+
+    <Disciplina rdf:about="#discAnatomia">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Disciplina>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discAntiguidade -->
+
+    <owl:Thing rdf:about="#discAntiguidade">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discBacteriologia -->
+
+    <owl:Thing rdf:about="#discBacteriologia">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discEmbriologia -->
+
+    <owl:Thing rdf:about="#discEmbriologia">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discEpidemiologia -->
+
+    <Disciplina rdf:about="#discEpidemiologia">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Disciplina>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discEstDados -->
+
+    <owl:Thing rdf:about="#discEstDados">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discEstetica -->
+
+    <Disciplina rdf:about="#discEstetica">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Disciplina>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discEvolucao -->
+
+    <Disciplina rdf:about="#discEvolucao">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Disciplina>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discFilMedieval -->
+
+    <owl:Thing rdf:about="#discFilMedieval">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discFisiologia -->
+
+    <Disciplina rdf:about="#discFisiologia">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Disciplina>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discHistSocialBrasil -->
+
+    <owl:Thing rdf:about="#discHistSocialBrasil">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discIA -->
+
+    <Disciplina rdf:about="#discIA">
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Disciplina>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discIntrHistoria -->
+
+    <owl:Thing rdf:about="#discIntrHistoria">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discPreHistoria -->
+
+    <owl:Thing rdf:about="#discPreHistoria">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discProgramacao -->
+
+    <owl:Thing rdf:about="#discProgramacao">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#discTeoriaConhecimento -->
+
+    <owl:Thing rdf:about="#discTeoriaConhecimento">
+        <rdf:type rdf:resource="#Disciplina"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docAlmeidaJr -->
+
+    <Docente rdf:about="#docAlmeidaJr">
+        <rdf:type rdf:resource="#Biologia"/>
+        <rdf:type rdf:resource="#Ciencia"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Docente>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docCezar -->
+
+    <Ciencia rdf:about="#docCezar">
+        <rdf:type rdf:resource="#Biologia"/>
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Ciencia>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docFlavioSoares -->
+
+    <CienciaComp rdf:about="#docFlavioSoares">
+        <rdf:type rdf:resource="#Ciencia"/>
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </CienciaComp>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docJoseAmabis -->
+
+    <Pessoas rdf:about="#docJoseAmabis">
+        <rdf:type rdf:resource="#Biologia"/>
+        <rdf:type rdf:resource="#Ciencia"/>
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docLelianeBarros -->
+
+    <CienciaComp rdf:about="#docLelianeBarros">
+        <rdf:type rdf:resource="#Ciencia"/>
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </CienciaComp>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docMarceloFinger -->
+
+    <Pessoas rdf:about="#docMarceloFinger">
+        <rdf:type rdf:resource="#Ciencia"/>
+        <rdf:type rdf:resource="#CienciaComp"/>
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docMarilenaChaui -->
+
+    <Filosofia rdf:about="#docMarilenaChaui">
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <sobrenome rdf:datatype="&xsd;string">Chau&#237;</sobrenome>
+        <nome rdf:datatype="&xsd;string">Marilena</nome>
+    </Filosofia>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docNelsonWolosker -->
+
+    <Pessoas rdf:about="#docNelsonWolosker">
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="#Medicina"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docNewtonCosta -->
+
+    <Filosofia rdf:about="#docNewtonCosta">
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <sobrenome rdf:datatype="&xsd;string">Costa</sobrenome>
+        <nome rdf:datatype="&xsd;string">Newton</nome>
+    </Filosofia>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docRenataWassermann -->
+
+    <Ciencia rdf:about="#docRenataWassermann">
+        <rdf:type rdf:resource="#CienciaComp"/>
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Ciencia>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docRenatoJanine -->
+
+    <owl:Thing rdf:about="#docRenatoJanine">
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="#Filosofia"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <sobrenome rdf:datatype="&xsd;string">Janine</sobrenome>
+        <nome rdf:datatype="&xsd;string">Renato</nome>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docRonaldoGryschek -->
+
+    <Docente rdf:about="#docRonaldoGryschek">
+        <rdf:type rdf:resource="#Medicina"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Docente>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#docThelmaOkay -->
+
+    <Pessoas rdf:about="#docThelmaOkay">
+        <rdf:type rdf:resource="#Docente"/>
+        <rdf:type rdf:resource="#Medicina"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estAmanda -->
+
+    <owl:Thing rdf:about="#estAmanda">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+        <nome rdf:datatype="&xsd;string">Amanda</nome>
+        <sobrenome rdf:datatype="&xsd;string">Vasconcelos</sobrenome>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estAna -->
+
+    <owl:Thing rdf:about="#estAna">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estAndre -->
+
+    <Estudante rdf:about="#estAndre">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Estudante>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estBarbara -->
+
+    <owl:Thing rdf:about="#estBarbara">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estBernardo -->
+
+    <Estudante rdf:about="#estBernardo">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Estudante>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estBruno -->
+
+    <Estudante rdf:about="#estBruno">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Estudante>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estCarlos -->
+
+    <owl:Thing rdf:about="#estCarlos">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estCarolina -->
+
+    <Pessoas rdf:about="#estCarolina">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estDiana -->
+
+    <Pessoas rdf:about="#estDiana">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estDiego -->
+
+    <Pessoas rdf:about="#estDiego">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estEduardo -->
+
+    <owl:Thing rdf:about="#estEduardo">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estFernanda -->
+
+    <owl:Thing rdf:about="#estFernanda">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estFlavio -->
+
+    <Pessoas rdf:about="#estFlavio">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estGabriela -->
+
+    <Estudante rdf:about="#estGabriela">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Estudante>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estGustavo -->
+
+    <owl:Thing rdf:about="#estGustavo">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estJuliana -->
+
+    <owl:Thing rdf:about="#estJuliana">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estJulio -->
+
+    <Estudante rdf:about="#estJulio">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Estudante>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estLeandro -->
+
+    <owl:Thing rdf:about="#estLeandro">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estLuana -->
+
+    <Pessoas rdf:about="#estLuana">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estMarcio -->
+
+    <owl:Thing rdf:about="#estMarcio">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estMarieta -->
+
+    <owl:Thing rdf:about="#estMarieta">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estMercia -->
+
+    <Pessoas rdf:about="#estMercia">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estNoberto -->
+
+    <Estudante rdf:about="#estNoberto">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Estudante>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estOlavo -->
+
+    <owl:Thing rdf:about="#estOlavo">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estOlivia -->
+
+    <owl:Thing rdf:about="#estOlivia">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estOnofre -->
+
+    <Pessoas rdf:about="#estOnofre">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estPatricio -->
+
+    <owl:Thing rdf:about="#estPatricio">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estPaula -->
+
+    <owl:Thing rdf:about="#estPaula">
+        <rdf:type rdf:resource="#Estudante"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estRenato -->
+
+    <Estudante rdf:about="#estRenato">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Estudante>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#estRoberta -->
+
+    <Estudante rdf:about="#estRoberta">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Estudante>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcAnaEliza -->
+
+    <Funcionario rdf:about="#funcAnaEliza">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Funcionario>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcAntonio -->
+
+    <Pessoas rdf:about="#funcAntonio">
+        <rdf:type rdf:resource="#Funcionario"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcClaudio -->
+
+    <Pessoas rdf:about="#funcClaudio">
+        <rdf:type rdf:resource="#Funcionario"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcJoao -->
+
+    <Funcionario rdf:about="#funcJoao">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Funcionario>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcJose -->
+
+    <Funcionario rdf:about="#funcJose">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Funcionario>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcJosefa -->
+
+    <owl:Thing rdf:about="#funcJosefa">
+        <rdf:type rdf:resource="#Funcionario"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcLais -->
+
+    <owl:Thing rdf:about="#funcLais">
+        <rdf:type rdf:resource="#Funcionario"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcMario -->
+
+    <Funcionario rdf:about="#funcMario">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Funcionario>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcNivaldo -->
+
+    <Pessoas rdf:about="#funcNivaldo">
+        <rdf:type rdf:resource="#Funcionario"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Pessoas>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcNivea -->
+
+    <Funcionario rdf:about="#funcNivea">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Funcionario>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcPedro -->
+
+    <Funcionario rdf:about="#funcPedro">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Funcionario>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcRejane -->
+
+    <owl:Thing rdf:about="#funcRejane">
+        <rdf:type rdf:resource="#Funcionario"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcRenato -->
+
+    <owl:Thing rdf:about="#funcRenato">
+        <rdf:type rdf:resource="#Funcionario"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcRomulo -->
+
+    <Funcionario rdf:about="#funcRomulo">
+        <rdf:type rdf:resource="#Pessoas"/>
+        <rdf:type rdf:resource="&owl;Thing"/>
+    </Funcionario>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeA.owl#funcRonaldo -->
+
+    <owl:Thing rdf:about="#funcRonaldo">
+        <rdf:type rdf:resource="#Funcionario"/>
+        <rdf:type rdf:resource="#Pessoas"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
