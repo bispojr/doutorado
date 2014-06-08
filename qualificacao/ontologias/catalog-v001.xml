@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1402183964553" name="duplicate:http://www.owl-ontologies.com/universidadeA.owl" uri="universidadeA.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1402183964553" name="duplicate:http://www.owl-ontologies.com/universidadeA.owl" uri="universidadeAInferred.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1402183964553" name="duplicate:http://www.owl-ontologies.com/universidadeB.owl" uri="universidadeB.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1402183964553" name="duplicate:http://www.owl-ontologies.com/universidadeB.owl" uri="universidadeBInferred.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1402187841017" name="duplicate:http://www.owl-ontologies.com/universidadeA.owl" uri="universidadeA.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1402187841017" name="duplicate:http://www.owl-ontologies.com/universidadeA.owl" uri="universidadeAInferida.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1402187841017" name="duplicate:http://www.owl-ontologies.com/universidadeB.owl" uri="universidadeB.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1402187841017" name="duplicate:http://www.owl-ontologies.com/universidadeB.owl" uri="universidadeBInferida.owl"/>
     </group>
 </catalog>

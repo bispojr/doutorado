@@ -19,7 +19,24 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about=""/>
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
     
 
 
@@ -34,31 +51,31 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#departamento -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#departamento -->
 
-    <owl:ObjectProperty rdf:about="#departamento">
-        <rdfs:domain rdf:resource="#Funcionario"/>
-        <rdfs:range rdf:resource="#Sala"/>
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#departamento">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Sala"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#leciona -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#leciona -->
 
-    <owl:ObjectProperty rdf:about="#leciona">
-        <rdfs:range rdf:resource="#Aula"/>
-        <rdfs:domain rdf:resource="#Professor"/>
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#leciona">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#publicacoes -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#publicacoes -->
 
-    <owl:ObjectProperty rdf:about="#publicacoes">
-        <rdfs:domain rdf:resource="#Funcionario"/>
-        <rdfs:range rdf:resource="#Referencia"/>
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#publicacoes">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Referencia"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -81,20 +98,20 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#dataContr -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#dataContr -->
 
-    <owl:DatatypeProperty rdf:about="#dataContr">
-        <rdfs:domain rdf:resource="#Funcionario"/>
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#dataContr">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
         <rdfs:range rdf:resource="&xsd;date"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#nome -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#nome -->
 
-    <owl:DatatypeProperty rdf:about="#nome">
-        <rdfs:domain rdf:resource="#Funcionario"/>
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#nome">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
         <rdfs:range rdf:resource="&xsd;string"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
     </owl:DatatypeProperty>
@@ -118,105 +135,105 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#Assistente -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#Assistente -->
 
-    <owl:Class rdf:about="#Assistente">
-        <rdfs:subClassOf rdf:resource="#Funcionario"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#Assistente">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#AssistenteEnsino -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#AssistenteEnsino -->
 
-    <owl:Class rdf:about="#AssistenteEnsino">
-        <rdfs:subClassOf rdf:resource="#Assistente"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#AssistenteEnsino">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Assistente"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#AssistentePesquisa -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#AssistentePesquisa -->
 
-    <owl:Class rdf:about="#AssistentePesquisa">
-        <rdfs:subClassOf rdf:resource="#Assistente"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#AssistentePesquisa">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Assistente"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#Aula -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#Aula -->
 
-    <owl:Class rdf:about="#Aula">
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#Doutorando -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando -->
 
-    <owl:Class rdf:about="#Doutorando">
-        <rdfs:subClassOf rdf:resource="#Funcionario"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#Funcionario -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario -->
 
-    <owl:Class rdf:about="#Funcionario">
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#Professor -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#Professor -->
 
-    <owl:Class rdf:about="#Professor">
-        <rdfs:subClassOf rdf:resource="#Funcionario"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#ProfessorAssistente -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorAssistente -->
 
-    <owl:Class rdf:about="#ProfessorAssistente">
-        <rdfs:subClassOf rdf:resource="#Professor"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorAssistente">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#ProfessorAssociado -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorAssociado -->
 
-    <owl:Class rdf:about="#ProfessorAssociado">
-        <rdfs:subClassOf rdf:resource="#Professor"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorAssociado">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#ProfessorDE -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE -->
 
-    <owl:Class rdf:about="#ProfessorDE">
-        <rdfs:subClassOf rdf:resource="#Professor"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#ProfessorVisitante -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorVisitante -->
 
-    <owl:Class rdf:about="#ProfessorVisitante">
-        <rdfs:subClassOf rdf:resource="#Professor"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorVisitante">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#Referencia -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#Referencia -->
 
-    <owl:Class rdf:about="#Referencia">
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#Referencia">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#Sala -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#Sala -->
 
-    <owl:Class rdf:about="#Sala">
+    <owl:Class rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#Sala">
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
     </owl:Class>
     
@@ -239,586 +256,653 @@
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#curCompNuvens -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#curCompNuvens -->
 
-    <owl:Thing rdf:about="#curCompNuvens">
-        <rdf:type rdf:resource="#Aula"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#curCompNuvens">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#curDitaduraMilitar -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#curDitaduraMilitar -->
 
-    <owl:Thing rdf:about="#curDitaduraMilitar">
-        <rdf:type rdf:resource="#Aula"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#curDitaduraMilitar">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#curHistoriaEvolucao -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#curHistoriaEvolucao -->
 
-    <Aula rdf:about="#curHistoriaEvolucao">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#curLattes -->
-
-    <owl:Thing rdf:about="#curLattes">
-        <rdf:type rdf:resource="#Aula"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#curHistoriaEvolucao">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#curMetodoSocratico -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#curLattes -->
 
-    <owl:Thing rdf:about="#curMetodoSocratico">
-        <rdf:type rdf:resource="#Aula"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#curLattes">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#depBio -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#curMetodoSocratico -->
 
-    <owl:Thing rdf:about="#depBio">
-        <rdf:type rdf:resource="#Sala"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#curMetodoSocratico">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#depComp -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#depBio -->
 
-    <Sala rdf:about="#depComp">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Sala>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#depFilo -->
-
-    <Sala rdf:about="#depFilo">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Sala>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#depHist -->
-
-    <owl:Thing rdf:about="#depHist">
-        <rdf:type rdf:resource="#Sala"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#depBio">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Sala"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#depMed -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#depComp -->
 
-    <owl:Thing rdf:about="#depMed">
-        <rdf:type rdf:resource="#Sala"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#depComp">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Sala"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discAbiogenese -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#depFilo -->
 
-    <owl:Thing rdf:about="#discAbiogenese">
-        <rdf:type rdf:resource="#Aula"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#depFilo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Sala"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discAnatomia -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#depHist -->
 
-    <Aula rdf:about="#discAnatomia">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discAntiguidade -->
-
-    <Aula rdf:about="#discAntiguidade">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discBacteriologia -->
-
-    <owl:Thing rdf:about="#discBacteriologia">
-        <rdf:type rdf:resource="#Aula"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#depHist">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Sala"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discEpidemiologia -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#depMed -->
 
-    <Aula rdf:about="#discEpidemiologia">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discEstDados -->
-
-    <Aula rdf:about="#discEstDados">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discEstetica -->
-
-    <Aula rdf:about="#discEstetica">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discEvolucao -->
-
-    <Aula rdf:about="#discEvolucao">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discFilMedieval -->
-
-    <Aula rdf:about="#discFilMedieval">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discFisiologia -->
-
-    <owl:Thing rdf:about="#discFisiologia">
-        <rdf:type rdf:resource="#Aula"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#depMed">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Sala"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discHisSocialBrasil -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discAbiogenese -->
 
-    <owl:Thing rdf:about="#discHisSocialBrasil">
-        <rdf:type rdf:resource="#Aula"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discAbiogenese">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discIA -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discAnatomia -->
 
-    <owl:Thing rdf:about="#discIA">
-        <rdf:type rdf:resource="#Aula"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discAnatomia">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discIntrHistoria -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discAntiguidade -->
 
-    <Aula rdf:about="#discIntrHistoria">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discProgramacao -->
-
-    <Aula rdf:about="#discProgramacao">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#discTeoriaConhecimento -->
-
-    <Aula rdf:about="#discTeoriaConhecimento">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Aula>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docAlmeidaJr -->
-
-    <Professor rdf:about="#docAlmeidaJr">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#ProfessorDE"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Professor>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docAntonioSilva -->
-
-    <Funcionario rdf:about="#docAntonioSilva">
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="#ProfessorAssociado"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docCezar -->
-
-    <owl:Thing rdf:about="#docCezar">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="#ProfessorDE"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discAntiguidade">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docEmanuelCarrilho -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discBacteriologia -->
 
-    <Professor rdf:about="#docEmanuelCarrilho">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#ProfessorAssociado"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Professor>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docFabioAndrade -->
-
-    <Professor rdf:about="#docFabioAndrade">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#ProfessorAssociado"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Professor>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docJoseAmabis -->
-
-    <Professor rdf:about="#docJoseAmabis">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#ProfessorVisitante"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Professor>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docLelianeBarros -->
-
-    <Funcionario rdf:about="#docLelianeBarros">
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="#ProfessorDE"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docMarceloFinger -->
-
-    <owl:Thing rdf:about="#docMarceloFinger">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="#ProfessorDE"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discBacteriologia">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docMarilenaChaui -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discEpidemiologia -->
 
-    <Funcionario rdf:about="#docMarilenaChaui">
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="#ProfessorDE"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docNelsonWolosker -->
-
-    <ProfessorDE rdf:about="#docNelsonWolosker">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </ProfessorDE>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docNewtonCosta -->
-
-    <Funcionario rdf:about="#docNewtonCosta">
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="#ProfessorDE"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docReginaldoCoelho -->
-
-    <Funcionario rdf:about="#docReginaldoCoelho">
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="#ProfessorAssociado"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docRenataWassermann -->
-
-    <Professor rdf:about="#docRenataWassermann">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#ProfessorDE"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Professor>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docRenatoJanine -->
-
-    <ProfessorDE rdf:about="#docRenatoJanine">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </ProfessorDE>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docRonaldoGryschek -->
-
-    <Funcionario rdf:about="#docRonaldoGryschek">
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="#ProfessorDE"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docTeodoroAlmeida -->
-
-    <owl:Thing rdf:about="#docTeodoroAlmeida">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#Professor"/>
-        <rdf:type rdf:resource="#ProfessorAssociado"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discEpidemiologia">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#docThelmaOkay -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discEstDados -->
 
-    <Professor rdf:about="#docThelmaOkay">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="#ProfessorDE"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Professor>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estAmanda -->
-
-    <Doutorando rdf:about="#estAmanda">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Doutorando>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estBarbara -->
-
-    <Doutorando rdf:about="#estBarbara">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Doutorando>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estCarlos -->
-
-    <owl:Thing rdf:about="#estCarlos">
-        <rdf:type rdf:resource="#Doutorando"/>
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discEstDados">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estDiego -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discEstetica -->
 
-    <owl:Thing rdf:about="#estDiego">
-        <rdf:type rdf:resource="#Doutorando"/>
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discEstetica">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estFlavio -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discEvolucao -->
 
-    <Funcionario rdf:about="#estFlavio">
-        <rdf:type rdf:resource="#Doutorando"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estJuliana -->
-
-    <Funcionario rdf:about="#estJuliana">
-        <rdf:type rdf:resource="#Doutorando"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estLuana -->
-
-    <Doutorando rdf:about="#estLuana">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Doutorando>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estMercia -->
-
-    <Funcionario rdf:about="#estMercia">
-        <rdf:type rdf:resource="#Doutorando"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estOlivia -->
-
-    <Doutorando rdf:about="#estOlivia">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Doutorando>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#estPaula -->
-
-    <Doutorando rdf:about="#estPaula">
-        <rdf:type rdf:resource="#Funcionario"/>
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Doutorando>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcAnaEliza -->
-
-    <Funcionario rdf:about="#funcAnaEliza">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcAntonio -->
-
-    <owl:Thing rdf:about="#funcAntonio">
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discEvolucao">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcClaudio -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discFilMedieval -->
 
-    <Funcionario rdf:about="#funcClaudio">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcJoao -->
-
-    <owl:Thing rdf:about="#funcJoao">
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discFilMedieval">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcJose -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discFisiologia -->
 
-    <owl:Thing rdf:about="#funcJose">
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discFisiologia">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcJosefa -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discHisSocialBrasil -->
 
-    <owl:Thing rdf:about="#funcJosefa">
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discHisSocialBrasil">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcLais -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discIA -->
 
-    <owl:Thing rdf:about="#funcLais">
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discIA">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcMario -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discIntrHistoria -->
 
-    <owl:Thing rdf:about="#funcMario">
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discIntrHistoria">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcNivaldo -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discProgramacao -->
 
-    <Funcionario rdf:about="#funcNivaldo">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcNivea -->
-
-    <Funcionario rdf:about="#funcNivea">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcPedro -->
-
-    <owl:Thing rdf:about="#funcPedro">
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discProgramacao">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcRejane -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#discTeoriaConhecimento -->
 
-    <Funcionario rdf:about="#funcRejane">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
-    
-
-
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcRenato -->
-
-    <owl:Thing rdf:about="#funcRenato">
-        <rdf:type rdf:resource="#Funcionario"/>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#discTeoriaConhecimento">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Aula"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
     </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcRomulo -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docAlmeidaJr -->
 
-    <Funcionario rdf:about="#funcRomulo">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docAlmeidaJr">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
     
 
 
-    <!-- http://www.owl-ontologies.com/universidadeB.owl#funcRonaldo -->
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docAntonioSilva -->
 
-    <Funcionario rdf:about="#funcRonaldo">
-        <rdf:type rdf:resource="&owl;Thing"/>
-    </Funcionario>
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docAntonioSilva">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorAssociado"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docCezar -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docCezar">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docEmanuelCarrilho -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docEmanuelCarrilho">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorAssociado"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docFabioAndrade -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docFabioAndrade">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorAssociado"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docJoseAmabis -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docJoseAmabis">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorVisitante"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docLelianeBarros -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docLelianeBarros">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docMarceloFinger -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docMarceloFinger">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docMarilenaChaui -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docMarilenaChaui">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docNelsonWolosker -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docNelsonWolosker">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docNewtonCosta -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docNewtonCosta">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docReginaldoCoelho -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docReginaldoCoelho">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorAssociado"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docRenataWassermann -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docRenataWassermann">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docRenatoJanine -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docRenatoJanine">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docRonaldoGryschek -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docRonaldoGryschek">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docTeodoroAlmeida -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docTeodoroAlmeida">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorAssociado"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#docThelmaOkay -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#docThelmaOkay">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Professor"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#ProfessorDE"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estAmanda -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estAmanda">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estBarbara -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estBarbara">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estCarlos -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estCarlos">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estDiego -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estDiego">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estFlavio -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estFlavio">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estJuliana -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estJuliana">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estLuana -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estLuana">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estMercia -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estMercia">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estOlivia -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estOlivia">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#estPaula -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#estPaula">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Doutorando"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcAnaEliza -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcAnaEliza">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcAntonio -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcAntonio">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcClaudio -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcClaudio">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcJoao -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcJoao">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcJose -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcJose">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcJosefa -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcJosefa">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcLais -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcLais">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcMario -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcMario">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcNivaldo -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcNivaldo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcNivea -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcNivea">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcPedro -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcPedro">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcRejane -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcRejane">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcRenato -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcRenato">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcRomulo -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcRomulo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.owl-ontologies.com/universidadeBInferida.owl#funcRonaldo -->
+
+    <owl:Thing rdf:about="http://www.owl-ontologies.com/universidadeBInferida.owl#funcRonaldo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/universidadeBInferida.owl#Funcionario"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
